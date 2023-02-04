@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "fdd23f15-989c-49e2-a634-ad0a64ba03d1",
+		"name": "PHP POC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getUsers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "localhost/ci-rest/index.php/api/users",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"ci-rest",
+						"index.php",
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insertUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"<script>Renjo</script>\",\r\n    \"lastName\": \"Dolosa\",\r\n    \"username\": \"r.dolosa\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost/ci-rest/index.php/api/users",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"ci-rest",
+						"index.php",
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateUser",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 3,\r\n    \"firstName\": \"Renjo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost/ci-rest/index.php/api/users",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"ci-rest",
+						"index.php",
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteUser",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"username\": \"Jenjeng@nda18\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost/ci-rest/index.php/api/users/4",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"ci-rest",
+						"index.php",
+						"api",
+						"users",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
